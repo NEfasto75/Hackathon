@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 99.3%;
+    /*background-color: rgb(186, 218, 226);*/
+}
+body {
+    background-image: url(wood_laptop.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    
+}
+.grid_container {
+    /*border: #fff 1px solid;*/
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 125px auto 225px 50px;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    color: #000;
+    font-size: 25px;
+}
+/*=====Header=====*/
+.header {
+    /*border: 1px #fff solid;*/
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 10px;
+}
+.title {
+    /*border: 1px black solid;*/
+    text-align: center;
+    margin: auto;
+    font-size: 60px;
+}
+.title2, a {
+    color: #000;
+    
+}
+.light {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px rgb(255, 255, 255), 0 0 30px;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #cccccc, 0 0 40px;
+    }
+  }
+/*=====Navigation=====*/
+.navi {
+    border: 3px gray groove;
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    width: 100%;
+    background-color: rgba(230, 83, 46, 0.562);
+}
+li {
+    font-size: 22px;
+    display: inline;
+    padding: 5px;
+    margin-right: 10px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+        color: rgb(191, 192, 192);
+}
+a:visited {
+    color: rgb(0, 0, 0);
+  }
+a:hover {
+        color: rgb(255, 80, 10);
+}
+/*=====Main=====*/
+.main {
+    /*border: 1px #fff solid;*/
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 10px;
+    /*background-color: #d4d4d4e5;*/
+    /*background-color: rgba(245, 243, 243, 0.575);*/
+}
+/*=====Form=====*/
+.formi {
+    text-align: center;
+    font-size: 50px;
+    font-family: "edu sa beginner", macondo, tahoma, sans-serif;
+    color: rgb(199, 199, 199);
+}
+.myform, input{
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+.myform .data {
+    background-color: rgb(230, 230, 230);
+}
+.myform > .data1 {
+    background-color: rgb(230, 230, 230);
+    height: 39px;
+}
+.button {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #ffff46;
+}
+.button:hover {
+    background-color: sienna;
+    color: #fff;
+}
+
+h4 {
+    margin: 5px;
+    font-family: "edu sa beginner", macondo, tahoma, sans-serif;
+    line-height: 30px;
+}
+h2 {
+    font-family: "edu sa beginner",macondo, tahoma, sans-serif;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #6b6b6b;
+}
+/*=====Section=====*/
+.section {
+    border: 3px rgba(128, 128, 128, 0.952) outset;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 35px;
+    line-height: 31px;
+    background-color: #a53e3e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    border-radius: 0 15px 0 15px;
+}
+/*=====Footer=====*/
+.footer {
+    /*border: 1px #fff solid;*/
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 5px;
+    line-height: 40px;
+    font-size: 18px;
+    color: red;
+
+}
+/*=====Smartphone&tablet=====*/
+@media screen and (min-width: 768px) {
+    body {
+    background-size: cover;
+    }
+}
+@media screen and (min-width: 768px) {
+    .grid_container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 50px; /*600px auto 50px*/
+    }
+}
+@media screen and (min-width: 768px) {
+    .header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .title {
+        font-size: 55px;
+    }
+    li {
+        font-size: 25px;
+        display: block;
+        padding: 5px;
+        margin-right: auto;
+    }
+    .title2 {
+        font-size: 50px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .main {
+        overflow: auto;
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+    .container_images img {
+        /*float: left;*/
+        /*width: 50%;*/
+        padding: 10px;
+        margin: 0px;
+        border-radius: 20px;
+      }
+      .container_images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+}
+@media screen and (min-width: 768px) {
+    .section {
+        grid-column-start: 2;
+        grid-column-end: -1;
+        font-size: 35px;
+        line-height: 55px;
+        padding: 35px;
+        margin-top: 85px;
+    }
+    @media screen and (min-width: 1024px) {
+        .section {
+            grid-column-start: 2;
+            grid-column-end: -1;
+            font-size: 15px;
+            line-height: 30px;
+            padding: 0px;
+            margin-top: 0px;
+            overflow: hidden;
+        }
+    
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+/* =====For large desktop=====*/
+@media screen and (min-width: 1280px) {
+    body {
+    background-size: cover;
+    }
+} 
+@media screen and (min-width: 1280px) {
+    .grid_container {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+} 
+@media screen and (min-width: 1280px) {
+    .header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .main {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .container_images img {
+        padding: 10px;
+        margin: 0px;
+      }
+      .container_images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+}
+@media screen and (min-width: 1280px) {
+    .section {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: -1;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 30px;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .footer {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+}
